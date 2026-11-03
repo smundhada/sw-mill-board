@@ -1,4 +1,10 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><meta http-equiv="refresh" content="300">
+<html><head><meta charset="utf-8">
 <style>html,body{margin:0;height:100%;background:#e9edf2}img{width:100%;height:100%;object-fit:contain;display:block}</style>
-</head><body><img src="https://raw.githubusercontent.com/smundhada/sw-mill-board/main/plate.png?t=1793723701858" alt=""></body></html>
+</head><body><img id="s" alt="">
+<script>
+  var base = "https://raw.githubusercontent.com/smundhada/sw-mill-board/main/plate.png";
+  function refresh() { document.getElementById('s').src = base + "?t=" + Date.now(); }
+  refresh();
+  setInterval(refresh, 60000);
+</script></body></html>
